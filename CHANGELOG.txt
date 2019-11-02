@@ -1,0 +1,33 @@
+---------------------------------------------------------------------------------------------------
+Version: 4.0.0
+Date: 27.01.2018
+  Features:
+    - Silently and properly compatible with RSO now (convenience > humour)
+  Bugfixes:
+    - Removed conditional event scripting that made the mod incompatible with long-running multiplayer saves. I am extremely sorry I didn't caught that one up in testing ;-;
+---------------------------------------------------------------------------------------------------
+Version: 3.0.0
+Date: 14.12.2017
+  Features:
+    - Added in-game changelog. Isn't that spiffy? ouo
+  Bugfixes:
+    - Bumped version for 0.16, so you can now safely enjoy your new true enemy: cliffs
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 06.12.2017
+  Features:
+    - Added RSO compatibility (requires user input for now, ty Zangiry!)
+  Bugfixes:
+    - Mod now nils autoplace peaks, not autoplace outright (less conflicts with other mods)
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 16.10.2017
+  Features:
+    - rechart() the map on biter spring cleaning to clear all that nasty red stuff
+    - Added a "few" more flavour messages (ty Lupus!)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 15.10.2017
+  Features:
+    - Disables biter spawning on existing and new savegames
+    - Clears all biters (enemy units) too with custom flavour messages
