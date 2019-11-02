@@ -1,9 +1,9 @@
 {
     "name": "BitersBegoneUpdated",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "title": "Biters Begone!",
-    "author": "Dustine",
-    "dependencies": ["base >= 0.17.00", "? rso-mod >= 3.5.0"],
-    "description": "Disables biter spawning (removes autoplace of bases and worms) and deletes all enemy units when loading a game. Reversible by removing!",
+    "author": "AngledLuffa",
+    "dependencies": ["base >= 0.17.00"],
+    "description": "Disables biter spawning and deletes all enemy units when loading a game. Reversible by removing!",
     "factorio_version": "0.17"
 }
