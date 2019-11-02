@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 09.20.2019
+  Features:
+    - RSO far from home can potentially generate very large bases, so we use a separate method to eliminate the outskirts of those bases.  If a biter triggers, the biter and its spawner are both deleted as part of that event.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 27.07.2019
   Features:

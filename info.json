@@ -1,6 +1,6 @@
 {
     "name": "BitersBegoneUpdated",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "title": "Biters Begone!",
     "author": "AngledLuffa",
     "dependencies": ["base >= 0.17.00"],
