@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 27.07.2019
+  Features:
+    - Even larger patch eliminated, as RSO occasionally made biters outside the original patch
+
+---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 24.04.2019
   Features:

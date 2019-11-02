@@ -6,12 +6,12 @@ local function clear_biters(area, silent)
     expanded_area = {}
     
     expanded_area["left_top"] = {}
-    expanded_area["left_top"]["x"] = area.left_top.x - 32
-    expanded_area["left_top"]["y"] = area.left_top.y - 32
+    expanded_area["left_top"]["x"] = area.left_top.x - 64
+    expanded_area["left_top"]["y"] = area.left_top.y - 64
     
     expanded_area["right_bottom"] = {}
-    expanded_area["right_bottom"]["x"] = area.right_bottom.x + 32
-    expanded_area["right_bottom"]["y"] = area.right_bottom.y + 32
+    expanded_area["right_bottom"]["x"] = area.right_bottom.x + 64
+    expanded_area["right_bottom"]["y"] = area.right_bottom.y + 64
   end
   
   for _, surface in pairs(game.surfaces) do
