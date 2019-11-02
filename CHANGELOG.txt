@@ -1,0 +1,6 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 24.04.2019
+  Features:
+    - Forked from Biters Begone! v4.0.0
+    - Biters eliminated from new patches by scanning and erasing an area slightly larger than the new patch
