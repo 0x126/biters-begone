@@ -1,9 +1,9 @@
 {
     "name": "BitersBegoneUpdated",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "title": "Biters Begone!",
     "author": "AngledLuffa",
-    "dependencies": ["base >= 0.18.00"],
+    "dependencies": ["base >= 1.00.00"],
     "description": "Disables biter spawning and deletes all enemy units when loading a game. Reversible by removing!",
-    "factorio_version": "0.18"
+    "factorio_version": "1.00"
 }
