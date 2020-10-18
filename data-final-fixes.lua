@@ -5,7 +5,7 @@ local zeroExpression = {
   }
 
 function resetRichness(ent)
-  if ent and ent.autoplace then
+  if ent and ent.autoplace and ent.autoplace.force == "enemy" then
     ent.autoplace.richness_multiplier = null
     ent.autoplace.richness_expression = zeroExpression
     ent.autoplace.probability_expression = zeroExpression
@@ -18,22 +18,15 @@ function removeProbability(ent)
   end
 end
 
+
 for _, spawner in pairs(data.raw["unit-spawner"]) do
   removeProbability(spawner)
+  resetRichness(spawner)
 end
 
 for _, turret in pairs(data.raw.turret) do
   if turret.subgroup == "enemies" then
     removeProbability(turret)
+    resetRichness(turret)
   end
 end
-        
-for _, type in pairs(data.raw) do
-  for _, prototype in pairs(type) do
-    if prototype.autoplace and prototype.autoplace.force == "enemy" then
-      resetRichness(prototype)
-      removeProbability(prototype)
-    end
-  end
-end
-
