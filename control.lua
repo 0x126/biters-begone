@@ -15,7 +15,7 @@ local function clear_biters(area, silent)
   end
   
   for _, surface in pairs(game.surfaces) do
-    for _, entity in pairs(surface.find_entities_filtered({force="enemy", area=expanded_area})) do
+    for _, entity in pairs(surface.find_entities_filtered({force="enemy", type={"turret", "unit-spawner", "unit"}, area=expanded_area})) do
       if entity.destroy() then num = num + 1 end
     end
   end
