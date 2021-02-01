@@ -4,12 +4,14 @@ import os
 import re
 import zipfile
 
-zip_prefix = 'BitersBegoneUpdated'
 zip_suffix = 'zip'
 
 if __name__ == '__main__':
     with open("info.json") as fin:
-        version = json.load(fin)['version']
+        info_json = json.load(fin)
+        version = info_json['version']
+        zip_prefix = info_json['name']
+
     version_name = zip_prefix + "_" + version
     zipname = version_name + '.' + zip_suffix
     print("Building %s" % zipname)
