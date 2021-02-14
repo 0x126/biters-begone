@@ -2,6 +2,9 @@ local function clear_biters(area, silent)
   local num = 0
   local expanded_area=nil
   
+  -- For chunks far from home, RSO has a very large area, so
+  -- some created spawners and turrets escape unless we expand
+  -- the area around the new chunk.
   if area then
     expanded_area = {}
     
@@ -34,6 +37,10 @@ script.on_init(function()
 end)
 
 script.on_event(defines.events.on_chunk_generated, function(event)
+  -- an alternate approach would be to redefine the autoplace settings
+  -- https://wiki.factorio.com/Console#Prevent_biters_being_on_newly_generated_chunks
+  -- but that did not seem to work with RSO enabled
+  --
   -- RSO creates entities without looking at the entity creation
   -- values.  This means that our data-final-fixes changes don't
   -- turn off biter spawning when RSO biter spawning is active.
@@ -43,18 +50,6 @@ script.on_event(defines.events.on_chunk_generated, function(event)
 end)
 
 script.on_event(defines.events.on_chunk_charted, function(event)
-  -- For chunks far from home, RSO has a very large area, so
-  -- some created spawners and turrets escape unless we expand
-  -- the area by an unreasonable amount.
-
-  --area = {}
-  --area["left_top"] = {}
-  --area["left_top"]["x"] = event.position.x * 32
-  --area["left_top"]["y"] = event.position.y * 32
-  --area["right_bottom"] = {}
-  --area["right_bottom"]["x"] = event.position.x * 32 + 32
-  --area["right_bottom"]["y"] = event.position.y * 32 + 32
-
   clear_biters(event.area, true)
 end)
 
