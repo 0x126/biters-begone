@@ -1,20 +1,12 @@
-local zeroExpression = {
-    expression_id = "literal-number:1",
-    literal_value = 0,
-    type = "literal-number"
-  }
-
 function resetRichness(ent)
   if ent and ent.autoplace and ent.autoplace.force == "enemy" then
-    ent.autoplace.richness_multiplier = null
-    ent.autoplace.richness_expression = zeroExpression
-    ent.autoplace.probability_expression = zeroExpression
+    ent.autoplace = nil
   end
 end
 
 function removeProbability(ent)
   if ent and ent.autoplace then
-    ent.autoplace.probability_expression = zeroExpression
+    ent.autoplace = nil
   end
 end
 
